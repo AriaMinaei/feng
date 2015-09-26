@@ -1,0 +1,41 @@
+{
+  "name": "@ariaminaei/feng",
+  "version": "0.1.0-dev.1",
+  "description": "(work in progress)",
+  "author": "Aria Minaei",
+  "license": "MIT",
+  "main": "src/feng.ls",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AriaMinaei/feng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AriaMinaei/feng/issues"
+  },
+  "scripts": {
+    "test": "mocha \"test/**/*.ls\"",
+    "test.w": "mocha \"test/**/*.ls\" --watch",
+    "compile": "lsc -bco lib src",
+    "compile.w": "lsc -wbco lib src",
+    "dev": "npm run compile.w",
+    "watch": "npm run compile.w & npm run test.w",
+    "winwatch": "start/b npm run compile.w & npm run test.w",
+    "prepublish": "npm run compile"
+  },
+  "dependencies": {
+    "control.async": "^0.5.2",
+    "data.either": "^1.2.0",
+    "data.maybe": "^1.2.1",
+    "immutable": "^3.7.4",
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-changes": "^1.3.4",
+    "chai-fuzzy": "^1.5.0",
+    "livescript": "^1.4.0",
+    "mocha": "^2.0.1",
+    "mocha-pretty-spec-reporter": "0.1.0-beta.2",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
+  }
+}
